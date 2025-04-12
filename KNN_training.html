@@ -1,0 +1,42 @@
+<!--Verplaats naar index voor testen-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediaPipe Handpose</title>
+  <link rel="stylesheet" href="./src/index.css">
+  <script defer type="module" src="./src/script.jsx"></script>
+</head>
+
+<body>
+
+<section>
+  <h1>Handpose detection</h1>
+  <button id="webcamButton">STARTWEBCAM</button>
+  <button id="logButton">LOG DATA</button>
+  <button id="trainButton">Train</button>
+  <button id="ckeckButton">Check</button>
+  <button id="fistButton">Fist</button>
+  <button id="thumbsUpButton">thumbs Up</button>
+  <button id="pointButton">point</button>
+
+  <div class="videoView">
+    <div style="position: relative;">
+      <div id="gestureOutput">
+        <p id="gestureText">Voorspeld gebaar: Geen</p>
+      </div>
+      <div id="videoWrapper">
+        <video id="webcam" style="position: absolute;" muted autoplay playsinline></video>
+        <canvas id="output_canvas" style="position: absolute; left: 0px; top: 0px;"></canvas>
+        <div id="myimage"></div>
+      </div>
+      <textarea id="dataOutput" rows="10" cols="50" readonly></textarea>
+    </div>
+  </div>
+</section>
+</body>
+
+</html>
